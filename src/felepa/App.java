@@ -29,7 +29,10 @@ public class App {
 			} else if (escolha == 0) {
 				do {
 					senha = JOptionPane.showInputDialog("conta: " + cc.numeroConta + "\nDigite sua senha!");
-					if (senha.equals(cc.senha)) {
+					if(senha == null) {
+						break;
+					}
+					else if (senha.equals(cc.senha)) {
 						String[] opcoes1 = { "Saque", "Depósito", "Saldo", "Cheque Especial", "Cancelar" };
 						escolha1 = JOptionPane.showOptionDialog(null, "Qual opcão deseja?", "Escolha",
 								JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcoes1, opcoes1[0]);
@@ -80,7 +83,6 @@ public class App {
 							JOptionPane.showMessageDialog(null, cc.exibirSaldo(), "Confirmação", JOptionPane.INFORMATION_MESSAGE);
 							break;
 						}
-
 					} else {
 						JOptionPane.showMessageDialog(null, "SENHA INCORRETA!", "ERRO!", JOptionPane.INFORMATION_MESSAGE);
 						break;
@@ -89,7 +91,10 @@ public class App {
 			} else if (escolha == 1) {
 				do {
 					senha = JOptionPane.showInputDialog("conta: " + cp.numeroConta + "\nDigite sua senha!");
-					if (senha.equals(cp.senha)) {
+					if(senha == null) {
+						break;
+					}
+					else if(senha.equals(cp.senha)) {
 						String[] opcoes1 = { "Saque", "Depósito", "Saldo", "Rendimento", "Cancelar" };
 						escolha1 = JOptionPane.showOptionDialog(null, 
 								"Qual opcão deseja?", 
